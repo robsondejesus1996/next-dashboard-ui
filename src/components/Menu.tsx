@@ -1,3 +1,7 @@
+import { role } from "@/lib/data";
+import Image from "next/image";
+import Link from "next/link";
+
 const menuItems = [
   {
     title: "MENU",
@@ -112,3 +116,17 @@ const menuItems = [
     ],
   },
 ];
+
+const Menu = () => {
+  return (
+    <div className="mt-4 text-sm">
+      {menuItems.map(i=>(
+        <div className="" key={i.title}>
+          <span>{i.title}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Menu;
